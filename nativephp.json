@@ -1,0 +1,34 @@
+{
+    "name": "graystack/nativephp-sign",
+    "description": "A native signature pad for NativePHP Mobile: draw with a finger, get a PNG back in PHP.",
+    "namespace": "NativeSign",
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "components": [
+        {
+            "type": "signature_pad",
+            "element": "Graystack\\NativeSign\\Elements\\SignaturePad",
+            "blade": "Graystack\\NativeSign\\Components\\SignaturePad",
+            "android_renderer": "one.graystack.plugins.nativesign.ui.SignaturePadRenderer",
+            "ios_renderer": "SignaturePadRenderer",
+            "self_closing": true,
+            "element_events": []
+        }
+    ],
+    "android": {
+        "min_version": 26,
+        "dependencies": {
+            "implementation": []
+        }
+    },
+    "ios": {
+        "min_version": "17.0",
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        },
+        "init_function": "registerNativeSignOrientation"
+    }
+}

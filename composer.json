@@ -1,0 +1,62 @@
+{
+    "name": "graystack/nativephp-sign",
+    "description": "A native signature pad for NativePHP Mobile: draw with a finger, get a PNG back in PHP.",
+    "type": "nativephp-plugin",
+    "license": "MIT",
+    "keywords": [
+        "nativephp",
+        "nativephp-mobile",
+        "signature",
+        "signature-pad",
+        "swiftui",
+        "jetpack-compose"
+    ],
+    "homepage": "https://github.com/graystackit/nativephp-plugin-sign",
+    "support": {
+        "issues": "https://github.com/graystackit/nativephp-plugin-sign/issues",
+        "source": "https://github.com/graystackit/nativephp-plugin-sign"
+    },
+    "authors": [
+        {
+            "name": "Graystack",
+            "email": "office@graystack.cloud"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "nativephp/mobile": "^4.6"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Graystack\\NativeSign\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Graystack\\NativeSign\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Graystack\\NativeSign\\NativeSignServiceProvider"
+            ]
+        },
+        "nativephp": {
+            "manifest": "nativephp.json"
+        }
+    },
+    "scripts": {
+        "test": "pest"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
